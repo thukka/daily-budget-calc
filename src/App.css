@@ -1,3 +1,56 @@
 .App {
   color: #fff;
+  margin: auto;
+  width: 80%;
+  padding-top: 50%;
+  text-align: center;
+}
+
+.App input {
+  color: #fff;
+  background-color: rgba(255, 153, 255, 10%);
+  border: none;
+  border-bottom: black 2px solid;
+  min-height: 50px;
+  min-width: 270px;
+}
+
+.DailyBudget {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.Intro {
+  display: inline-block;
+  margin: 10px auto;
+  width: 270px;
+  animation: typing 2s steps(22), blink .5s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .DailyBudget {
+    font-size: 58px;
+  }
+  
+  .Intro {
+    font-size: 24px;
+  }
+}
+
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
 }

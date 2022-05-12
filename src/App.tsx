@@ -27,9 +27,13 @@ function App() {
     return (
         <div className="App">
             <div className="DailyBudget">
-                {dailyBudget}
+                {dailyBudget} / day
             </div>
             <input type="number" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSum(e.target.value)} />
+            <br />
+            <div className="Intro">
+                Calculate your daily budget!
+            </div>
         </div>
     );
 }
