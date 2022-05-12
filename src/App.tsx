@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-const calcDailyBudget = (saldo: any): number => {
+const calcDailyBudget = (saldo: string): number => {
     // hae nykyinen päivä ja kuun viimeinen päivä
     const date = new Date();
     const endOfMonth = new Date();
@@ -21,7 +21,7 @@ const calcDailyBudget = (saldo: any): number => {
 };
 
 function App() {
-    const [sum, setSum] = useState(0);
+    const [sum, setSum] = useState<string>("0");
     const dailyBudget = calcDailyBudget(sum);
 
     return (
@@ -29,7 +29,7 @@ function App() {
             <div className="DailyBudget">
                 {dailyBudget}
             </div>
-            <input type="number" onChange={(e: any) => setSum(e.target.value)} />
+            <input type="number" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSum(e.target.value)} />
         </div>
     );
 }
