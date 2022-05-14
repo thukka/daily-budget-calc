@@ -12,15 +12,17 @@ function App() {
             <div className="daily-budget">
                 {dailyBudget} / day
             </div>
-            <input type="number" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSum(e.target.value)} />
+            <input type="number" placeholder="€" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSum(e.target.value)} />
             <br />
-            <div className="intro">
+            <div className="intro-animated">
                 Calculate your daily budget!
             </div>
             <br />
             (for the rest of the month)
             <footer>
-                <GitHub_Logo className="footer-logo" />
+                <a href="https://github.com/thukka" target="_blank" rel="noreferrer">
+                    <GitHub_Logo className="footer-logo" />
+                </a>
             </footer>
         </div>
     );
