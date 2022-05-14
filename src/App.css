@@ -1,28 +1,28 @@
-.App {
-  color: #fff;
+.app {
+  color: #363635;
   margin: auto;
   width: 80%;
-  padding-top: 50%;
   text-align: center;
+  padding-top: 50%;
 }
 
-.App input {
-  color: #fff;
-  background-color: rgba(255, 153, 255, 10%);
+.app input {
+  color: #363635;
+  font-size: 24px;
+  background-color: rgba(255, 153, 255, 5%);
   border: none;
   border-bottom: black 2px solid;
   min-height: 50px;
   min-width: 270px;
 }
 
-.DailyBudget {
+.daily-budget {
   font-size: 48px;
   margin-bottom: 20px;
 }
 
-.Intro {
+.intro {
   display: inline-block;
-  margin: 10px auto;
   width: 270px;
   animation: typing 2s steps(22), blink .5s step-end infinite alternate;
   white-space: nowrap;
@@ -30,15 +30,35 @@
   border-right: 3px solid;
   font-family: monospace;
   font-size: 16px;
+  margin-top: 20px;
+}
+
+footer {
+  /* border-top: 1px dashed #363635; */
+  width: 80%;
+  position: absolute;
+  bottom: 50px;
+  font: -apple-system 14px italic;
+}
+
+.footer-logo {
+  margin-top: 10px;
+  width: 50px;
+  height: 50px;
 }
 
 @media only screen and (min-width: 768px) {
-  .DailyBudget {
+  .app {
+    padding-top: 20%;
+  }
+
+  .daily-budget {
     font-size: 58px;
   }
   
-  .Intro {
+  .intro {
     font-size: 24px;
+    width: 410px;
   }
 }
 
