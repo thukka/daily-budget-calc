@@ -23,7 +23,7 @@ function App() {
     return (
         <div className="app">
             <div className="daily-budget">
-                {dailyBudget} / day
+                {dailyBudget} € / day
             </div>
             <input id="input-sum" type="number" placeholder="€" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSumToStorage(e.target.value)} />
             <br />
