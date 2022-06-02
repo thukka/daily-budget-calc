@@ -1,4 +1,4 @@
-const calcDailyBudget = (saldo: string): number => {
+const calcDailyBudget = (balance: string): { totalSum: number, days: number } => {
     // get current day and last day of the current month
     const date = new Date();
     const endOfMonth = new Date();
@@ -12,8 +12,11 @@ const calcDailyBudget = (saldo: string): number => {
     days = days + 1;
 
     // return as a number with 2 decimals
-    const dailySumma = Number(saldo) / Number(days);
-    return Number(dailySumma.toFixed(2));
+    const dailySum = Number(balance) / Number(days);
+    return {
+        totalSum: Number(dailySum.toFixed(2)),
+        days
+    };
 };
 
 export default calcDailyBudget;
