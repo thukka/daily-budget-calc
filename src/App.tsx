@@ -33,7 +33,7 @@ function App() {
             <br />
             (for the rest of the month)
             <footer>
-                <a href="https://github.com/thukka" target="_blank" rel="noreferrer">
+                <a href="https://github.com/thukka/daily-budget-calc" target="_blank" rel="noreferrer">
                     <GitHub_Logo className="footer-logo" />
                 </a>
             </footer>
