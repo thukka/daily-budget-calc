@@ -23,7 +23,7 @@ function App() {
     return (
         <div className="app">
             <div className="daily-budget">
-                {dailyBudget} € / day
+                {dailyBudget.totalSum} € / day
             </div>
             <input id="input-sum" type="number" placeholder="€" onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSumToStorage(e.target.value)} />
             <br />
@@ -31,7 +31,7 @@ function App() {
                 Calculate your daily budget!
             </div>
             <br />
-            (for the rest of the month)
+            (for the rest of the month - currently {dailyBudget.days} days remaining)
             <footer>
                 <a href="https://github.com/thukka/daily-budget-calc" target="_blank" rel="noreferrer">
                     <GitHub_Logo className="footer-logo" />
