@@ -1,0 +1,7 @@
+services:
+  node-app:
+    build: .
+    container_name: daily-budget-calc
+    restart: unless-stopped
+    ports:
+    - 4000:3000
