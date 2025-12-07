@@ -10,11 +10,14 @@ COPY package*.json ./
 # Install dependencies
 RUN npm ci
 
-# Copy the rest of your app's source code
+# Copy the rest of the source code
 COPY . .
 
-# Your app binds to port 3000 so you'll use the EXPOSE instruction to have it mapped by the docker daemon
+# Build the app
+RUN npm run build
+
+# EXPOSE instruction to have it mapped by the docker daemon
 EXPOSE 3000
 
-# Define the command to run your app using CMD which defines your runtime
+# Define the command to the app using CMD which defines your runtime
 CMD ["npm", "start"]
